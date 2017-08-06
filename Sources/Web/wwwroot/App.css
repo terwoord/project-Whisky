@@ -28,3 +28,12 @@
 .SightSeeing {
     color: green;
 }
+
+#infoContent > img {
+    height: 400px;
+    width: auto;
+}
+
+#title {
+    font-weight: bold;
+}
