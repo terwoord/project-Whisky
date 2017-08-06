@@ -1,7 +1,7 @@
 ﻿export interface ILocationInfo {
     title: string;
     description?: string;
-    kind: "Activiteit" | "Sight-seeing";
+    kind: "Activiteit" | "SightSeeing";
     coordinate: google.maps.LatLng;
     image: string;
     url?: string;

@@ -20,7 +20,8 @@ export namespace App {
         var xContainer = $('#menu');
         for (var xLocation of xLocations) {
             xContainer.append(`
-<div class="locatie "${xLocation.kind}">
+<div class="locatie ${xLocation.kind}">
+<span class="SoortLocatie${xLocation.kind}"></span>
 <span>${xLocation.title}</span>
 </div>
 `);

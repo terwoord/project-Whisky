@@ -12,7 +12,7 @@ export function getLocationsMatthijs(): ILocationInfo[] {
         },
         {
             title: "Lealt Falls",
-            kind: "Sight-seeing",
+            kind: "SightSeeing",
             coordinate: new google.maps.LatLng(57.5643633, -6.1522248),
             image: '/Content/LealtFalls.jpg',
         }

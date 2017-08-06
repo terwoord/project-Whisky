@@ -4,6 +4,12 @@ import { getLocationsSijmen } from './Locations.Sijmen';
 
 export namespace Locations {
     export function getLocations(): ILocationInfo[] {
-        return getLocationsMatthijs().concat(getLocationsSijmen());
+        var xResult = getLocationsMatthijs().concat(getLocationsSijmen());
+
+        xResult.sort((a, b) => {
+            return a.title.localeCompare(b.title);
+        });
+
+        return xResult;
     }
 }

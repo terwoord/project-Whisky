@@ -22,7 +22,7 @@ System.register("Locations.Matthijs", [], function (exports_2, context_2) {
             },
             {
                 title: "Lealt Falls",
-                kind: "Sight-seeing",
+                kind: "SightSeeing",
                 coordinate: new google.maps.LatLng(57.5643633, -6.1522248),
                 image: '/Content/LealtFalls.jpg',
             }
@@ -64,7 +64,11 @@ System.register("Locations", ["Locations.Matthijs", "Locations.Sijmen"], functio
         execute: function () {
             (function (Locations) {
                 function getLocations() {
-                    return Locations_Matthijs_1.getLocationsMatthijs().concat(Locations_Sijmen_1.getLocationsSijmen());
+                    var xResult = Locations_Matthijs_1.getLocationsMatthijs().concat(Locations_Sijmen_1.getLocationsSijmen());
+                    xResult.sort((a, b) => {
+                        return a.title.localeCompare(b.title);
+                    });
+                    return xResult;
                 }
                 Locations.getLocations = getLocations;
             })(Locations || (Locations = {}));
@@ -97,7 +101,8 @@ System.register("App", ["Locations"], function (exports_5, context_5) {
                     var xContainer = $('#menu');
                     for (var xLocation of xLocations) {
                         xContainer.append(`
-<div class="locatie "${xLocation.kind}">
+<div class="locatie ${xLocation.kind}">
+<span class="SoortLocatie${xLocation.kind}"></span>
 <span>${xLocation.title}</span>
 </div>
 `);

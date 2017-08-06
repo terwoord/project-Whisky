@@ -17,5 +17,14 @@
 #menu {
     float: right;
     height: 100%;
-    width: 300px
+    width: 300px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.Activiteit  {
+    color: maroon;
+}
+.SightSeeing {
+    color: green;
 }
