@@ -4,7 +4,7 @@
     kind: "Activiteit" | "SightSeeing";
     coordinate: google.maps.LatLng;
     image: string;
-    url?: string;
+    url: string;
     // in euro: 
     approxCosts?: number;
 }
