@@ -93,19 +93,29 @@ System.register("App", ["Locations"], function (exports_5, context_5) {
                         center: { lat: 57.63712860378047, lng: -4.570843749999991 },
                         zoom: 8
                     });
-                    buildLocationList();
+                    var xLocations = Locations_1.Locations.getLocations();
+                    buildLocationList(xLocations);
+                    addLocationsToGoogle(xLocations);
                 }
                 App.initialize = initialize;
-                function buildLocationList() {
-                    var xLocations = Locations_1.Locations.getLocations();
+                function buildLocationList(locations) {
                     var xContainer = $('#menu');
-                    for (var xLocation of xLocations) {
+                    for (var xLocation of locations) {
                         xContainer.append(`
 <div class="locatie ${xLocation.kind}">
 <span class="SoortLocatie${xLocation.kind}"></span>
 <span>${xLocation.title}</span>
 </div>
 `);
+                    }
+                }
+                function addLocationsToGoogle(locations) {
+                    for (var xLocation of locations) {
+                        var xMarker = new google.maps.Marker({
+                            position: xLocation.coordinate,
+                            label: xLocation.kind[0],
+                            map: App.map,
+                        });
                     }
                 }
             })(App || (App = {}));
