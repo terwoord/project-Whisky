@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es2015",
+    "lib": [ "es2015", "dom" ],
+    "outFile": "App.js",
+    "module": "system"
+  },
+  "compileOnSave": true,
+   "exclude": [
+
+  ] 
+}
