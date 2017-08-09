@@ -16,6 +16,12 @@ export function getLocationsMatthijs(): ILocationInfo[] {
             coordinate: new google.maps.LatLng(57.5643633, -6.1522248),
             image: '/Content/LealtFalls.jpg',
             url: "https://www.google.de/maps/place/Lealt+Falls/@57.5651507,-6.1539658,17.29z/data=!4m5!3m4!1s0x0:0x9608936e71c3b877!8m2!3d57.5650023!4d-6.1551929"
-        }
-    ];
+        },
+        {   
+            title: "Glenfinnan Viaduct",
+            kind: "SightSeeing",
+            coordinate: new google.maps.LatLng(56.8763083, -5.4340482),
+            image: '/Content/GlenfinnanViaduct.jpg',
+            url: "https://www.visitscotland.com/info/towns-villages/glenfinnan-p236571"
+    }];
 }
