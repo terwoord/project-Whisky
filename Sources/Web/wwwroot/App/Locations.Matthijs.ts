@@ -66,6 +66,28 @@ export function getLocationsMatthijs(): ILocationInfo[] {
             image: '/Content/ToberMory.jpg',
             url: "https://www.google.de/maps/place/Tobermory,+Isle+of+Mull,+Verenigd+Koninkrijk/@56.622787,-6.0792433,15z/data=!3m1!4b1!4m5!3m4!1s0x488b8d510730b925:0xf70ea9b257f84dca!8m2!3d56.6227813!4d-6.0723004"
         },
-        
+        {
+            title: "CairnGorm Mountain",
+            kind: "SightSeeing",
+            coordinate: new google.maps.LatLng(57.1171281, -3.6394352),
+            image: '/Content/CairngormMountain.jpg',
+            url: "https://www.google.de/maps/@57.1171281,-3.6394352,3a,75y,92.71h,68.22t/data=!3m8!1e1!3m6!1sAF1QipNs_DF5Vl0ynFpGwHW6KYhWprLLhaSSQ_jhL_sn!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNs_DF5Vl0ynFpGwHW6KYhWprLLhaSSQ_jhL_sn%3Dw203-h100-k-no-pi-3.045456-ya165.5-ro0-fo100!7i4608!8i2032"
+        },
+        {
+            title: "Cromarty",
+            kind: "SightSeeing",
+            coordinate: new google.maps.LatLng(57.6837268, -4.0369002),
+            image: '/Content/Cromarty.jpg',
+            url: "http://www.undiscoveredscotland.co.uk/cromarty/ferry/index.html"
+        },
+   //     https://must-see-scotland.com/ten-great-scottish-views/
+   //     https://www.visitscotland.com/see-do/landscapes-nature/iconic-scottish-views/
+   //     http://www.huffingtonpost.com/viator/10-of-the-most-beautiful_b_3714626.html
+   //     http://metro.co.uk/2015/06/20/20-incredible-places-to-visit-in-scotland-before-you-die-5250540/
+   //     http://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/scotland/articles/Top-10-cities-and-places-to-visit-in-Scotland/
+   //     http://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/scotland/articles/Scotlands-best-scenic-drives/
+   //         https://www.tripadvisor.co.uk/Attractions-g186535-Activities-Scottish_Highlands_Scotland.html
+			//http://www.independent.co.uk/life-style/snowdonia-scottish-highlands-loch-ness-uk-20-best-views-britain-stonehenge-chedder-gorge-buttermere-a7678046.html
     ];//Loch Avon, Cairngorms
+	
 }

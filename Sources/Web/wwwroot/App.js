@@ -76,6 +76,20 @@ System.register("Locations.Matthijs", [], function (exports_2, context_2) {
                 image: '/Content/ToberMory.jpg',
                 url: "https://www.google.de/maps/place/Tobermory,+Isle+of+Mull,+Verenigd+Koninkrijk/@56.622787,-6.0792433,15z/data=!3m1!4b1!4m5!3m4!1s0x488b8d510730b925:0xf70ea9b257f84dca!8m2!3d56.6227813!4d-6.0723004"
             },
+            {
+                title: "CairnGorm Mountain",
+                kind: "SightSeeing",
+                coordinate: new google.maps.LatLng(57.1171281, -3.6394352),
+                image: '/Content/CairngormMountain.jpg',
+                url: "https://www.google.de/maps/@57.1171281,-3.6394352,3a,75y,92.71h,68.22t/data=!3m8!1e1!3m6!1sAF1QipNs_DF5Vl0ynFpGwHW6KYhWprLLhaSSQ_jhL_sn!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNs_DF5Vl0ynFpGwHW6KYhWprLLhaSSQ_jhL_sn%3Dw203-h100-k-no-pi-3.045456-ya165.5-ro0-fo100!7i4608!8i2032"
+            },
+            {
+                title: "Cromarty",
+                kind: "SightSeeing",
+                coordinate: new google.maps.LatLng(57.6837268, -4.0369002),
+                image: '/Content/Cromarty.jpg',
+                url: "http://www.undiscoveredscotland.co.uk/cromarty/ferry/index.html"
+            },
         ]; //Loch Avon, Cairngorms
     }
     exports_2("getLocationsMatthijs", getLocationsMatthijs);
