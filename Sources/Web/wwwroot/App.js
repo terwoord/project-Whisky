@@ -32,7 +32,8 @@ System.register("Locations.Matthijs", [], function (exports_2, context_2) {
                 kind: "SightSeeing",
                 coordinate: new google.maps.LatLng(56.8763083, -5.4340482),
                 image: '/Content/GlenfinnanViaduct.jpg',
-                url: "https://www.visitscotland.com/info/towns-villages/glenfinnan-p236571"
+                url: "https://www.visitscotland.com/see-do/landscapes-nature/iconic-scottish-views/",
+                description: "Voor wandel instructies, zie stap 7 van link"
             },
             {
                 title: "Duncansby Stacks",
@@ -89,6 +90,21 @@ System.register("Locations.Matthijs", [], function (exports_2, context_2) {
                 coordinate: new google.maps.LatLng(57.6837268, -4.0369002),
                 image: '/Content/Cromarty.jpg',
                 url: "http://www.undiscoveredscotland.co.uk/cromarty/ferry/index.html"
+            },
+            {
+                title: "Loch Maree",
+                kind: "SightSeeing",
+                coordinate: new google.maps.LatLng(57.580287, -5.2414855),
+                image: '/Content/LochMaree.jpg',
+                url: "https://www.google.de/maps/place/Loch+Maree/@57.580287,-5.2414855,15.22z/data=!4m5!3m4!1s0x488e67954024c5bb:0x925b1d200800b86c!8m2!3d57.7104618!4d-5.5306467"
+            },
+            {
+                title: "Zee Kayakken, Isle of Skye",
+                kind: "Activiteit",
+                coordinate: new google.maps.LatLng(57.2431991, -5.8809379),
+                image: '/Content/KayakSkye.jpeg',
+                url: "http://www.skyakadventures.com/",
+                approxCosts: "?"
             },
         ]; //Loch Avon, Cairngorms
     }
@@ -166,22 +182,40 @@ System.register("App", ["Locations"], function (exports_5, context_5) {
                 App.initialize = initialize;
                 function buildLocationList(locations) {
                     var xContainer = $('#menu');
-                    for (var xLocation of locations) {
+                    for (var i = 0; i < locations.length; i++) {
+                        let xLocation = locations[i];
                         xContainer.append(`
-<div class="locatie ${xLocation.kind}">
+<div class="locatie ${xLocation.kind}" onclick="OurApp.highlightMarker(${i})">
 <span class="SoortLocatie${xLocation.kind}"></span>
 <span>${xLocation.title}</span>
 </div>
 `);
                     }
                 }
+                var mMarkers = [];
+                function highlightMarker(markerIndex) {
+                    mMarkers[markerIndex].setAnimation(google.maps.Animation.BOUNCE);
+                    setTimeout(() => {
+                        mMarkers[markerIndex].setAnimation(null);
+                    }, 2000);
+                }
+                App.highlightMarker = highlightMarker;
                 function addLocationsToGoogle(locations) {
-                    for (let xLocation of locations) {
+                    for (var i = 0; i < locations.length; i++) {
+                        let xLocation = locations[i];
+                        var xIcon;
+                        if (xLocation.kind === "SightSeeing") {
+                            xIcon = "/Markers/darkgreen_MarkerS.png";
+                        }
+                        else {
+                            xIcon = "/Markers/brown_MarkerA.png";
+                        }
                         let xMarker = new google.maps.Marker({
                             position: xLocation.coordinate,
-                            label: xLocation.kind[0],
-                            map: App.map
+                            map: App.map,
+                            icon: xIcon
                         });
+                        mMarkers[i] = xMarker;
                         xMarker.addListener('click', () => {
                             var xTitle;
                             if (xLocation.url) {

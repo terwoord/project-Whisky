@@ -6,5 +6,5 @@
     image: string;
     url: string;
     // in euro: 
-    approxCosts?: number;
+    approxCosts?: number | string;
 }

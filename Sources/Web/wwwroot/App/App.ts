@@ -23,9 +23,11 @@ export namespace App {
 
     function buildLocationList(locations: ILocationInfo[]) {
         var xContainer = $('#menu');
-        for (var xLocation of locations) {
+        for (var i = 0; i < locations.length; i++) {
+            let xLocation = locations[i];
+            
             xContainer.append(`
-<div class="locatie ${xLocation.kind}">
+<div class="locatie ${xLocation.kind}" onclick="OurApp.highlightMarker(${i})">
 <span class="SoortLocatie${xLocation.kind}"></span>
 <span>${xLocation.title}</span>
 </div>
@@ -33,13 +35,33 @@ export namespace App {
         }
     }
 
+    var mMarkers: google.maps.Marker[] = [];
+
+    export function highlightMarker(markerIndex: number) {
+        mMarkers[markerIndex].setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(() => {
+                mMarkers[markerIndex].setAnimation(null);
+            },
+            2000);
+    }
+
     function addLocationsToGoogle(locations: ILocationInfo[]) {
-        for (let xLocation of locations) {
+        for (var i = 0; i < locations.length; i++) {
+            let xLocation = locations[i];
+        
+            var xIcon: string;
+            if (xLocation.kind === "SightSeeing") {
+                xIcon = "/Markers/darkgreen_MarkerS.png";
+            } else {
+                xIcon = "/Markers/brown_MarkerA.png";
+            }
             let xMarker = new google.maps.Marker({
                 position: xLocation.coordinate,
-                label: xLocation.kind[0],
-                map: map
+                map: map,
+                icon: xIcon
             });
+
+            mMarkers[i] = xMarker;
 
             xMarker.addListener('click',
                 () => {

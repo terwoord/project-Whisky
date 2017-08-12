@@ -22,7 +22,8 @@ export function getLocationsMatthijs(): ILocationInfo[] {
             kind: "SightSeeing",
             coordinate: new google.maps.LatLng(56.8763083, -5.4340482),
             image: '/Content/GlenfinnanViaduct.jpg',
-            url: "https://www.visitscotland.com/info/towns-villages/glenfinnan-p236571"
+            url: "https://www.visitscotland.com/see-do/landscapes-nature/iconic-scottish-views/",
+            description: "Voor wandel instructies, zie stap 7 van link"
         },
         {
             title: "Duncansby Stacks",
@@ -80,8 +81,22 @@ export function getLocationsMatthijs(): ILocationInfo[] {
             image: '/Content/Cromarty.jpg',
             url: "http://www.undiscoveredscotland.co.uk/cromarty/ferry/index.html"
         },
-   //     https://must-see-scotland.com/ten-great-scottish-views/
-   //     https://www.visitscotland.com/see-do/landscapes-nature/iconic-scottish-views/
+        {
+            title: "Loch Maree",
+            kind: "SightSeeing",
+            coordinate: new google.maps.LatLng(57.580287, -5.2414855),
+            image: '/Content/LochMaree.jpg',
+            url: "https://www.google.de/maps/place/Loch+Maree/@57.580287,-5.2414855,15.22z/data=!4m5!3m4!1s0x488e67954024c5bb:0x925b1d200800b86c!8m2!3d57.7104618!4d-5.5306467"
+        },
+        {
+            title: "Zee Kayakken, Isle of Skye",
+            kind: "Activiteit",
+            coordinate: new google.maps.LatLng(57.2431991, -5.8809379),
+            image: '/Content/KayakSkye.jpeg',
+            url: "http://www.skyakadventures.com/",
+            approxCosts: "?"
+        },
+   
    //     http://www.huffingtonpost.com/viator/10-of-the-most-beautiful_b_3714626.html
    //     http://metro.co.uk/2015/06/20/20-incredible-places-to-visit-in-scotland-before-you-die-5250540/
    //     http://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/scotland/articles/Top-10-cities-and-places-to-visit-in-Scotland/
