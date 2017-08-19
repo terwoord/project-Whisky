@@ -76,6 +76,7 @@ export namespace App {
 ${xTitle}<br>
 <img src="${xLocation.image}"><br>
 <span id="infoContentDescription">${xLocation.description || ""}</span>
+<span id="aproxCosts">${xLocation.approxCosts || ""}</span>
 </div>`);
                     xInfoWindow.close();
                     xInfoWindow.open(map, xMarker);

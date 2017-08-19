@@ -96,13 +96,37 @@ export function getLocationsMatthijs(): ILocationInfo[] {
             url: "http://www.skyakadventures.com/",
             approxCosts: "?"
         },
-   
-   //     http://www.huffingtonpost.com/viator/10-of-the-most-beautiful_b_3714626.html
-   //     http://metro.co.uk/2015/06/20/20-incredible-places-to-visit-in-scotland-before-you-die-5250540/
-   //     http://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/scotland/articles/Top-10-cities-and-places-to-visit-in-Scotland/
-   //     http://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/scotland/articles/Scotlands-best-scenic-drives/
-   //         https://www.tripadvisor.co.uk/Attractions-g186535-Activities-Scottish_Highlands_Scotland.html
-			//http://www.independent.co.uk/life-style/snowdonia-scottish-highlands-loch-ness-uk-20-best-views-britain-stonehenge-chedder-gorge-buttermere-a7678046.html
-    ];//Loch Avon, Cairngorms
+        {
+            title: "Spirit of the Spey",
+            kind: "Activiteit",
+            coordinate: new google.maps.LatLng(57.0615264, -4.1234019),
+            image: '/Content/SpiritOfTheSpey.jpg',
+            url: "http://www.spiritofthespey.co.uk/",
+            description: "combinatie van kanoën en whisky-proeven mogelijk"
+        },
+        {
+            title: "Rockhopper Sea Kayaking",
+            kind: "Activiteit",
+            coordinate: new google.maps.LatLng(56.8384485, -5.1348653),
+            image: '/Content/Rockhopper.jpg',
+            url: "http://www.rockhopperscotland.co.uk",
+            description: "Verscheidene kayak tours (halve of hele dag)",
+            approxCosts: "£ 45 (£ 80)"
+        },
+         {
+            title: "G2Outdoor: Gorge walking, canyoning, etc",
+            kind: "Activiteit",
+            coordinate: new google.maps.LatLng(57.1416673, -3.9430388),
+            image: '/Content/G2Outdoor.jpg',
+            url: "http://www.g2outdoor.co.uk"
+        },
+        {
+            title: "ActiveOutdoorPursuits: Verscheidene",
+            kind: "Activiteit",
+            coordinate: new google.maps.LatLng(57.0602359, -4.1415155),
+            image: '/Content/ActiveOutdoorPursuits.jpg',
+            url: "http://www.ActiveOutdoorPursuits.com"
+        },
+    ];
 	
 }

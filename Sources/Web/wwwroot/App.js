@@ -106,7 +106,38 @@ System.register("Locations.Matthijs", [], function (exports_2, context_2) {
                 url: "http://www.skyakadventures.com/",
                 approxCosts: "?"
             },
-        ]; //Loch Avon, Cairngorms
+            {
+                title: "Spirit of the Spey",
+                kind: "Activiteit",
+                coordinate: new google.maps.LatLng(57.0615264, -4.1234019),
+                image: '/Content/SpiritOfTheSpey.jpg',
+                url: "http://www.spiritofthespey.co.uk/",
+                description: "combinatie van kanoën en whisky-proeven mogelijk"
+            },
+            {
+                title: "Rockhopper Sea Kayaking",
+                kind: "Activiteit",
+                coordinate: new google.maps.LatLng(56.8384485, -5.1348653),
+                image: '/Content/Rockhopper.jpg',
+                url: "http://www.rockhopperscotland.co.uk",
+                description: "Verscheidene kayak tours (halve of hele dag)",
+                approxCosts: "£ 45 (£ 80)"
+            },
+            {
+                title: "G2Outdoor: Gorge walking, canyoning, etc",
+                kind: "Activiteit",
+                coordinate: new google.maps.LatLng(57.1416673, -3.9430388),
+                image: '/Content/G2Outdoor.jpg',
+                url: "http://www.g2outdoor.co.uk"
+            },
+            {
+                title: "ActiveOutdoorPursuits: Verscheidene",
+                kind: "Activiteit",
+                coordinate: new google.maps.LatLng(57.0602359, -4.1415155),
+                image: '/Content/ActiveOutdoorPursuits.jpg',
+                url: "http://www.ActiveOutdoorPursuits.com"
+            },
+        ];
     }
     exports_2("getLocationsMatthijs", getLocationsMatthijs);
     return {
@@ -228,6 +259,7 @@ System.register("App", ["Locations"], function (exports_5, context_5) {
 ${xTitle}<br>
 <img src="${xLocation.image}"><br>
 <span id="infoContentDescription">${xLocation.description || ""}</span>
+<span id="aproxCosts">${xLocation.approxCosts || ""}</span>
 </div>`);
                             xInfoWindow.close();
                             xInfoWindow.open(App.map, xMarker);

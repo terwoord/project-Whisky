@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     height: 100%;
+    font-family: sans-serif;
 }
 
 .container {
@@ -20,6 +21,11 @@
     width: 300px;
     padding: 4px;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.span {
+    font-family: sans-serif;
 }
 
 .Activiteit  {
